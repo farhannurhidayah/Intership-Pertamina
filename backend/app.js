@@ -6,6 +6,8 @@ var cors = require('cors');
 const bodyParser = require('body-parser'); // Menambahkan middleware body-parser
 
 // Middleware JWT
+const authenticateJWT = require('./middleware/authenticateJWT');
+// const authorizeRole = require('./middleware/authorizeRole');
 
 // Mengimpor router dari masing-masing route
 const usercheck = require('./routes/users');
@@ -40,7 +42,7 @@ app.use('/auth', authRouter);
 app.use('/sopir', sopircheck);
 app.use('/perusahaan', perusahaancheck);
 app.use('/petugas', petugascheck);
-app.use('/test', test);
+app.use('/test', test, authenticateJWT);
 app.use('/pemeriksaan', pemeriksaanRouter);
 app.use('/user', usercheck);
 

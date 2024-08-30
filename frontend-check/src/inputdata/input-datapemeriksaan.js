@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HalamanPemeriksaan.css';
 
-function HalamanPemeriksaan({ formData = {}, setFormData, handleSubmit }) {
+function Inputdatapemeriksaan({ formData = {}, setFormData, handleSubmit }) {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -15,9 +15,9 @@ function HalamanPemeriksaan({ formData = {}, setFormData, handleSubmit }) {
   };
 
   return (
-    <div className="container">
-      <div className="form-container">
-        <h2 className="title">Halaman Pemeriksaan</h2>
+    <div className="pemeriksaan-container">
+      <div className="pemeriksaan-form-container">
+        <h2 className="pemeriksaan-title">Halaman Pemeriksaan</h2>
 
         <input
           type="text"
@@ -126,4 +126,4 @@ function HalamanPemeriksaan({ formData = {}, setFormData, handleSubmit }) {
   );
 }
 
-export default HalamanPemeriksaan;
+export default Inputdatapemeriksaan;
